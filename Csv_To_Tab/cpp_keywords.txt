@@ -1,0 +1,30 @@
+// Keywords common to the C and C++ programming languages
+// +-------------+---------------+--------------+------------------+-------------+
+// | auto        | break         | case         | char             | const       |
+// | continue    | default       | do           | double           | else        |
+// | enum        | extern        | float        | for              | goto        |
+// | if          | int           | long         | register         | return      |
+// | short       | signed        | sizeof       | static           | struct      |
+// | switch      | typedef       | union        | unsigned         | void        |
+// | volatile    | while         |              |                  |             |
+// +-------------+---------------+--------------+------------------+-------------+
+
+// C++-only keywords
+// +-------------+---------------+--------------+------------------+-------------+
+// | and         | and_eq        | asm          | bitand           | bitor       |
+// | bool        | catch         | class        | compl            | const_cast  |
+// | delete      | dynamic_cast  | explicit     | export           | false       |
+// | friend      | inline        | mutable      | namespace        | new         |
+// | not         | not_eq        | operator     | or               | or_eq       |
+// | private     | protected     | public       | reinterpret_cast | static_cast |
+// | template    | this          | throw        | true             | try         |
+// | typeid      | typename      | using        | virtual          | wchar_t     |
+// +-------------+---------------+--------------+------------------+-------------+
+
+// C++0x keywords
+// +-------------+---------------+--------------+------------------+-------------+
+// | xor         | xor_eq        |              |                  |             |
+// | alignof     | axiom         | char16_t     | char32_t         | concept     |
+// | concept_map | constexpr     | decltype     | late_check       | nullptr     |
+// | requires    | static_assert | thread_local |                  |             |
+// +-------------+---------------+--------------+------------------+-------------+

@@ -1,0 +1,11 @@
+[qw( Rule  Id  TxFlop  RxFlop  TxClock  RxClock  Comment )], # header
+[qw( A     0   undef   undef   clk1     clk2     aaa     )], # row[0]
+[qw( B     1   undef   undef   clk2     clk1     bbb     )], # row[1]
+[qw( C     2   undef   undef   clk1     clk2     ccc     )], # row[2]
+[qw( D     3   undef   undef   clk2     clk1     ddd     )], # row[3]
+[qw( E     4   undef   undef   clk1     clk2     eee     )], # row[4]
+[qw( F     5   undef   undef   clk2     clk1     fff     )], # row[5]
+[qw( G     6   undef   undef   clk1     clk2     ggg     )], # row[6]
+[qw( H     7   undef   undef   clk2     clk1     hhh     )], # row[7]
+[qw( I     8   undef   undef   clk1     clk2     iii     )], # row[8]
+[qw( J     9   undef   undef   clk2     clk1     jjj     )], # row[9]

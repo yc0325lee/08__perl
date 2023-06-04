@@ -1,0 +1,330 @@
+# vim: ft=perl ts=4 sw=4 tw=999 expandtab
+# ----------------------------------------------------------------------------
+# File : do_generation.pl
+# Description : 
+# Author : yc0325lee
+# Created : 2018-11-19 23:24:03 by prince2103
+# Modified : 2018-11-19 23:25:06 by prince2103
+# ----------------------------------------------------------------------------
+use strict;
+use warnings;
+use Carp;
+use Data::Dumper; $Data::Dumper::Indent = 1;
+
+# remember the DATA position!
+our $offset = tell(DATA);
+
+
+# class inheritance hierarchies
+our $href__hierarchy = {
+    Shape__Common => {
+        Shape__Base => {
+            Shape__OneDimensional => {
+                Shape__Dot => {},
+                Shape__Line => {},
+            },
+            Shape__TwoDimensional => {
+                Shape__Circle => {},
+                Shape__Square => {},
+                Shape__Triangle => {},
+            },
+            Shape__ThreeDimensional => {
+                Shape__Sphere => {},
+                Shape__Cube => {},
+                Shape__Tetrahedron => {},
+            },
+        },
+    },
+};
+
+our $href__attribute = {
+    Shape__Common => [qw(  )],
+    Shape__Base => [qw( name color )],
+    Shape__OneDimensional => [qw(  )],
+    Shape__TwoDimensional => [qw(  )],
+    Shape__ThreeDimensional => [qw(  )],
+    Shape__Dot => [qw( thickness )], # Shape__OneDimensional
+    Shape__Line => [qw( length )],
+    Shape__Circle => [qw( radius )], # Shape__TwoDimensional
+    Shape__Square => [qw( sideLength )],
+    Shape__Triangle => [qw( baseLength height )],
+    Shape__Sphere => [qw( radius )], # Shape__ThreeDimensional
+    Shape__Cube => [qw( edgeLength )],
+    Shape__Tetrahedron => [qw( edgeLength )],
+};
+
+
+
+
+visit($href__hierarchy, undef, 'Shape__Common');
+
+
+
+
+# -------------------------------------
+# Subroutines
+# -------------------------------------
+our $args_num_parent = 0;
+our $args_num_myself = 0;
+
+our @packageStack; # to calculate num_of_args!
+sub __args_num_parent {
+    my $count = 0;
+    for(my $i = 0; $i < $#packageStack; $i++) {
+        $count += @{$href__attribute->{$packageStack[$i]}};
+    }
+    return $count;
+}
+sub __args_num_myself {
+    my $count = 0;
+    for(my $i = 0; $i <= $#packageStack; $i++) {
+        $count += @{$href__attribute->{$packageStack[$i]}};
+    }
+    return $count;
+}
+
+sub visit {
+    @_==3 or confess "";
+    my $href = shift;
+    my $parent = shift;
+    my $myself = shift;
+    confess "" unless( defined $href->{$myself} );
+
+    push( @packageStack, $myself );
+
+    foreach my $child ( sort keys %{$href->{$myself}} ) {
+        visit($href->{$myself}, $myself, $child);
+    }
+
+    if( defined $parent ) {
+        write_package($parent, $myself);
+    }
+    else {
+        write_common($parent, $myself);
+    }
+
+    pop( @packageStack );
+}
+
+sub write_common {
+    @_==2 or confess "";
+    my $parent = shift;
+    my $myself = shift;
+
+    my $inFile = 'Someclass__Common.pm';
+    my $outFile = $myself . '.pm';
+
+    open(my $inFH, '<', $inFile) or confess "";
+    open(my $outFH, '>', $outFile) or confess "";
+
+    print "[info] writing $outFile ...\n";
+    while( <$inFH> )
+    {
+        s/__SOMECLASS__/$myself/g;
+        print $outFH $_;
+    }
+
+    close($outFH) or confess "";
+    close($inFH) or confess "";
+}
+
+sub write_package {
+    @_==2 or confess "";
+    my $parent = shift;
+    my $myself = shift;
+
+    my $outFile = $myself . '.pm';
+
+    print "[info] writing $outFile ...\n";
+    open(my $outFH, '>', $outFile) or confess "";
+
+    seek(DATA, $offset, 0); # rewind DATA handle!
+    while( <DATA> ) {
+        s/__SOMECLASS__/$myself/g;
+
+        if( m/__BASECLASS__/ ) {
+            if( defined $parent ) {
+                s/__BASECLASS__/$parent/g;
+            }
+            else {
+                s/__BASECLASS__//g;
+                next if( m/^use/ );
+            }
+        }
+
+        s/__NEW_NUM_ARGS__/sprintf("%d", __args_num_myself()+1)/eg;
+        s/__INIT_NUM_ARGS__/sprintf("%d", __args_num_myself()-__args_num_parent()+1)/eg;
+
+
+        if( 0 ) { }
+        elsif( m/__ATTRIBUTES__/ ) {
+            die "" unless( exists $href__attribute->{$myself} );
+            my @arguments;
+            push( @arguments, @{$href__attribute->{$myself}} );
+            foreach my $attr ( @arguments ) {
+                printf($outFH "    %s => undef,\n", $attr);
+            }
+        }
+        elsif( m/__NEW_ARGS_PASS__/ ) {
+            my @arguments;
+            for(my $i = 0; $i <= $#packageStack; $i++) { # current-class included
+                die "" unless( exists $href__attribute->{$packageStack[$i]} );
+                push( @arguments, @{$href__attribute->{$packageStack[$i]}} );
+            }
+            foreach my $attr ( @arguments ) {
+                printf($outFH "    my \$%s = shift;\n", $attr);
+            }
+        }
+        elsif( m/__ARGS_TO_BASE_NEW__/ ) {
+            my @arguments;
+            for(my $i = 0; $i < $#packageStack; $i++) { # base-classes' only
+                die "" unless( exists $href__attribute->{$packageStack[$i]} );
+                push( @arguments, @{$href__attribute->{$packageStack[$i]}} );
+            }
+            foreach my $attr ( @arguments ) {
+                printf($outFH "        \$%s,\n", $attr);
+            }
+        }
+        elsif( m/__ARGS_TO_INIT__/ ) { # current-class only
+            my @arguments;
+            push( @arguments, @{$href__attribute->{$myself}} );
+            foreach my $attr ( @arguments ) {
+                printf($outFH "        \$%s,\n", $attr);
+            }
+        }
+        elsif( m/__INIT_ARGS_PASS__/ ) {
+            my @arguments;
+            push( @arguments, @{$href__attribute->{$myself}} );
+            foreach my $attr ( @arguments ) {
+                printf($outFH "    my \$%s = shift;\n", $attr);
+            }
+        }
+        elsif( m/__INIT_ARGS_SET__/ ) {
+            my @arguments;
+            push( @arguments, @{$href__attribute->{$myself}} );
+            foreach my $attr ( @arguments ) {
+                printf($outFH "    \$this->%s(\$%s);\n", $attr, $attr);
+            }
+        }
+        else {
+            print $outFH $_; # default echo
+        }
+    }
+
+    close($outFH) or confess "";
+}
+
+__END__
+# vim: ft=perl ts=4 sw=4 tw=999 expandtab
+# ----------------------------------------------------------------------------
+# __SOMECLASS__.pm
+# ----------------------------------------------------------------------------
+package __SOMECLASS__;
+
+use strict;
+use warnings;
+use Carp;
+
+use __BASECLASS__;
+
+# -------------------------------------
+# package globals
+our $VERSION = 0.00;
+our @ISA = qw( __BASECLASS__ );
+our $CurrentClass = __PACKAGE__;
+our $AUTOLOAD;
+
+our $count = 0;
+
+our %__SOMECLASS__ = (
+  count => \$count,
+); # class attribute
+
+# -------------------------------------
+# file-scoped lexicals
+my %fields = (
+    __ATTRIBUTES__
+); # object attributes
+
+# -------------------------------------
+# special functions - don't touch
+foreach my $datum ( keys %__SOMECLASS__ ) {
+    no strict "refs";
+    *{$datum} = sub {
+        @_==1 or confess("[ERR ] Trying to modify read-only class attribute!");
+        my $either = shift;
+        return ${$__SOMECLASS__{$datum}}; # read-only
+    }
+}
+
+sub AUTOLOAD {
+    my $this = shift;
+    confess("[ERR ] instance method!") unless( ref($this) );
+    my $ThisClass = ref($this); # classname of $this
+
+    my $fieldname = $AUTOLOAD;
+    $fieldname =~ s/.*:://;
+    confess("[ERR ] Field $fieldname not exists in an object of class $ThisClass!")
+        unless( exists $this->{'permitted'}->{$fieldname} );
+
+    if( @_ ) { $this->{$fieldname} = shift; } # set()
+    return $this->{$fieldname}; # get()
+}
+
+sub BEGIN { }
+sub END { }
+sub DESTROY { $count--; }
+
+# -------------------------------------
+# class methods
+sub new {
+    @_==__NEW_NUM_ARGS__ or confess "";
+    my $class = shift;
+    confess("[ERR ] Instance method invocated on class method!") if( ref($class) );
+
+    __NEW_ARGS_PASS__
+
+    my $this = $class->SUPER::new(
+        __ARGS_TO_BASE_NEW__
+    ); # $this will be blessed up in the hierarchies!
+
+    foreach my $key ( keys %fields ) { $this->{'permitted'}->{$key} = 1; } # define!
+    foreach my $key ( keys %fields ) { $this->{$key} = $fields{$key}; } # create!
+
+    my $initializer = $CurrentClass . '::_init';
+    $this->$initializer(
+        __ARGS_TO_INIT__
+    );
+
+    $count++;
+
+    return $this;
+}
+
+# -------------------------------------
+# instance methods
+sub _init {
+    @_==__INIT_NUM_ARGS__ or confess "";
+    my $this = shift; # blessed-ref
+    confess("[ERR ] Class method invocated on instance method!") unless( ref($this) );
+    my $thisFunction = (caller(0))[3]; $thisFunction =~ s/.*:://;
+    my $ThisClass = ref($this); # $this's classname
+
+    __INIT_ARGS_PASS__
+
+    __INIT_ARGS_SET__
+}
+
+sub print {
+    @_==1 or confess "";
+    my $this = shift; # blessed-ref
+    confess("[ERR ] Class method invocated on instance method!") unless( ref($this) );
+    my $thisFunction = (caller(0))[3]; $thisFunction =~ s/.*:://;
+    my $ThisClass = ref($this); # $this's classname
+
+    #$this->SUPER::print();
+    #$this->dump();
+}
+
+
+1;

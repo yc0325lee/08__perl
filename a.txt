@@ -1,0 +1,42 @@
+Vehicle
+|   
++---AirVehicle
+|   |   
+|   +---PoweredAirVehicle
+|   |   |   
+|   |   +---JetPlane
+|   |   |   
+|   |   +---PropellerPlane
+|   |   
+|   +---UnpoweredAirVehicle
+|       |   
+|       +---Glider
+|   
++---LandVehicle
+|   |   
+|   +---FourWheelVehicle
+|   |   |   
+|   |   +---Car
+|   |       |   
+|   |       +---Estate
+|   |       |   
+|   |       +---SportsCar
+|   |       |   
+|   |       +---Truck
+|   |   
+|   +---TwoWheelVehicle
+|       |   
+|       +---Bicycle
+|       |   
+|       +---MotorCycle
+|   
++---WaterVehicle
+    |   
+    +---Boat
+        |   
+        +---CargoShip
+        |   
+        +---MotorBoat
+        |   
+        +---SailingBoat
+

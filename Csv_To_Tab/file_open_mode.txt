@@ -1,0 +1,11 @@
++-------------+------------------------------------------------------------------------------+
+| Mode        | Description                                                                  |
++-------------+------------------------------------------------------------------------------+
+| ios::app    | Append all output to the end of the file.                                    |
+| ios::ate    | Open a file for output and move to the end of the file (normally used to     |
+|             | append data to a file). Data can be written anywhere in the file.            |
+| ios::in     | Open a file for input.                                                       |
+| ios::out    | Open a file for output.                                                      |
+| ios::trunc  | Discard the file¡¯s contents (this also is the default action for ios::out). |
+| ios::binary | Open a file for binary                                                       |
++-------------+------------------------------------------------------------------------------+

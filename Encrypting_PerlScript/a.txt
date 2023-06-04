@@ -1,0 +1,650 @@
+>>> WRITE ZERO TO MEMORY <<<
+>>> PRINT PHYSICAL ARRAY OF MEM <<<
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 
+>>> WRITE PATTERN TO MEMORY <<<
+>>> PRINT PHYSICAL ARRAY OF MEM <<<
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+>>> MEM --> BACKUP <<<
+>>> SHIFTING BY FCA <<<
+>>> PRINT PHYSICAL ARRAY OF MEM <<<
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+11110000 11110000 00001111 00001111 
+00000000 11110000 00001111 00000000 
+00001111 11110000 00001111 11110000 
+00001111 00000000 00000000 11110000 
+>>> PRINT PHYSICAL ARRAY OF BACKUP <<<
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+00001111 00001111 11110000 11110000 
+>>> READ FROM MEMORY <<<
+Reading 1001 at 0 0 ...ERROR!
+Reading 1001 at 0 1 ...ERROR!
+Reading 1001 at 0 2 ...ERROR!
+Reading 1001 at 0 3 ...ERROR!
+Reading 0000 at 0 4 ...PASS!
+Reading 0000 at 0 5 ...PASS!
+Reading 0000 at 0 6 ...PASS!
+Reading 0000 at 0 7 ...PASS!
+Reading 1001 at 1 0 ...ERROR!
+Reading 1001 at 1 1 ...ERROR!
+Reading 1001 at 1 2 ...ERROR!
+Reading 1001 at 1 3 ...ERROR!
+Reading 0110 at 1 4 ...ERROR!
+Reading 0110 at 1 5 ...ERROR!
+Reading 0110 at 1 6 ...ERROR!
+Reading 0110 at 1 7 ...ERROR!
+Reading 0000 at 2 0 ...ERROR!
+Reading 0000 at 2 1 ...ERROR!
+Reading 0000 at 2 2 ...ERROR!
+Reading 0000 at 2 3 ...ERROR!
+Reading 0110 at 2 4 ...ERROR!
+Reading 0110 at 2 5 ...ERROR!
+Reading 0110 at 2 6 ...ERROR!
+Reading 0110 at 2 7 ...ERROR!
+Reading 0000 at 3 0 ...ERROR!
+Reading 0000 at 3 1 ...ERROR!
+Reading 0000 at 3 2 ...ERROR!
+Reading 0000 at 3 3 ...ERROR!
+Reading 1111 at 3 4 ...ERROR!
+Reading 1111 at 3 5 ...ERROR!
+Reading 1111 at 3 6 ...ERROR!
+Reading 1111 at 3 7 ...ERROR!
+Reading 1001 at 4 0 ...ERROR!
+Reading 1001 at 4 1 ...ERROR!
+Reading 1001 at 4 2 ...ERROR!
+Reading 1001 at 4 3 ...ERROR!
+Reading 0000 at 4 4 ...PASS!
+Reading 0000 at 4 5 ...PASS!
+Reading 0000 at 4 6 ...PASS!
+Reading 0000 at 4 7 ...PASS!
+Reading 1001 at 5 0 ...ERROR!
+Reading 1001 at 5 1 ...ERROR!
+Reading 1001 at 5 2 ...ERROR!
+Reading 1001 at 5 3 ...ERROR!
+Reading 0110 at 5 4 ...ERROR!
+Reading 0110 at 5 5 ...ERROR!
+Reading 0110 at 5 6 ...ERROR!
+Reading 0110 at 5 7 ...ERROR!
+Reading 0000 at 6 0 ...ERROR!
+Reading 0000 at 6 1 ...ERROR!
+Reading 0000 at 6 2 ...ERROR!
+Reading 0000 at 6 3 ...ERROR!
+Reading 0110 at 6 4 ...ERROR!
+Reading 0110 at 6 5 ...ERROR!
+Reading 0110 at 6 6 ...ERROR!
+Reading 0110 at 6 7 ...ERROR!
+Reading 0000 at 7 0 ...ERROR!
+Reading 0000 at 7 1 ...ERROR!
+Reading 0000 at 7 2 ...ERROR!
+Reading 0000 at 7 3 ...ERROR!
+Reading 1111 at 7 4 ...ERROR!
+Reading 1111 at 7 5 ...ERROR!
+Reading 1111 at 7 6 ...ERROR!
+Reading 1111 at 7 7 ...ERROR!
+Reading 1001 at 8 0 ...ERROR!
+Reading 1001 at 8 1 ...ERROR!
+Reading 1001 at 8 2 ...ERROR!
+Reading 1001 at 8 3 ...ERROR!
+Reading 0000 at 8 4 ...PASS!
+Reading 0000 at 8 5 ...PASS!
+Reading 0000 at 8 6 ...PASS!
+Reading 0000 at 8 7 ...PASS!
+Reading 1001 at 9 0 ...ERROR!
+Reading 1001 at 9 1 ...ERROR!
+Reading 1001 at 9 2 ...ERROR!
+Reading 1001 at 9 3 ...ERROR!
+Reading 0110 at 9 4 ...ERROR!
+Reading 0110 at 9 5 ...ERROR!
+Reading 0110 at 9 6 ...ERROR!
+Reading 0110 at 9 7 ...ERROR!
+Reading 0000 at 10 0 ...ERROR!
+Reading 0000 at 10 1 ...ERROR!
+Reading 0000 at 10 2 ...ERROR!
+Reading 0000 at 10 3 ...ERROR!
+Reading 0110 at 10 4 ...ERROR!
+Reading 0110 at 10 5 ...ERROR!
+Reading 0110 at 10 6 ...ERROR!
+Reading 0110 at 10 7 ...ERROR!
+Reading 0000 at 11 0 ...ERROR!
+Reading 0000 at 11 1 ...ERROR!
+Reading 0000 at 11 2 ...ERROR!
+Reading 0000 at 11 3 ...ERROR!
+Reading 1111 at 11 4 ...ERROR!
+Reading 1111 at 11 5 ...ERROR!
+Reading 1111 at 11 6 ...ERROR!
+Reading 1111 at 11 7 ...ERROR!
+Reading 1001 at 12 0 ...ERROR!
+Reading 1001 at 12 1 ...ERROR!
+Reading 1001 at 12 2 ...ERROR!
+Reading 1001 at 12 3 ...ERROR!
+Reading 0000 at 12 4 ...PASS!
+Reading 0000 at 12 5 ...PASS!
+Reading 0000 at 12 6 ...PASS!
+Reading 0000 at 12 7 ...PASS!
+Reading 1001 at 13 0 ...ERROR!
+Reading 1001 at 13 1 ...ERROR!
+Reading 1001 at 13 2 ...ERROR!
+Reading 1001 at 13 3 ...ERROR!
+Reading 0110 at 13 4 ...ERROR!
+Reading 0110 at 13 5 ...ERROR!
+Reading 0110 at 13 6 ...ERROR!
+Reading 0110 at 13 7 ...ERROR!
+Reading 0000 at 14 0 ...ERROR!
+Reading 0000 at 14 1 ...ERROR!
+Reading 0000 at 14 2 ...ERROR!
+Reading 0000 at 14 3 ...ERROR!
+Reading 0110 at 14 4 ...ERROR!
+Reading 0110 at 14 5 ...ERROR!
+Reading 0110 at 14 6 ...ERROR!
+Reading 0110 at 14 7 ...ERROR!
+Reading 0000 at 15 0 ...ERROR!
+Reading 0000 at 15 1 ...ERROR!
+Reading 0000 at 15 2 ...ERROR!
+Reading 0000 at 15 3 ...ERROR!
+Reading 1111 at 15 4 ...ERROR!
+Reading 1111 at 15 5 ...ERROR!
+Reading 1111 at 15 6 ...ERROR!
+Reading 1111 at 15 7 ...ERROR!
+Reading 1001 at 16 0 ...ERROR!
+Reading 1001 at 16 1 ...ERROR!
+Reading 1001 at 16 2 ...ERROR!
+Reading 1001 at 16 3 ...ERROR!
+Reading 0000 at 16 4 ...PASS!
+Reading 0000 at 16 5 ...PASS!
+Reading 0000 at 16 6 ...PASS!
+Reading 0000 at 16 7 ...PASS!
+Reading 1001 at 17 0 ...ERROR!
+Reading 1001 at 17 1 ...ERROR!
+Reading 1001 at 17 2 ...ERROR!
+Reading 1001 at 17 3 ...ERROR!
+Reading 0110 at 17 4 ...ERROR!
+Reading 0110 at 17 5 ...ERROR!
+Reading 0110 at 17 6 ...ERROR!
+Reading 0110 at 17 7 ...ERROR!
+Reading 0000 at 18 0 ...ERROR!
+Reading 0000 at 18 1 ...ERROR!
+Reading 0000 at 18 2 ...ERROR!
+Reading 0000 at 18 3 ...ERROR!
+Reading 0110 at 18 4 ...ERROR!
+Reading 0110 at 18 5 ...ERROR!
+Reading 0110 at 18 6 ...ERROR!
+Reading 0110 at 18 7 ...ERROR!
+Reading 0000 at 19 0 ...ERROR!
+Reading 0000 at 19 1 ...ERROR!
+Reading 0000 at 19 2 ...ERROR!
+Reading 0000 at 19 3 ...ERROR!
+Reading 1111 at 19 4 ...ERROR!
+Reading 1111 at 19 5 ...ERROR!
+Reading 1111 at 19 6 ...ERROR!
+Reading 1111 at 19 7 ...ERROR!
+Reading 1001 at 20 0 ...ERROR!
+Reading 1001 at 20 1 ...ERROR!
+Reading 1001 at 20 2 ...ERROR!
+Reading 1001 at 20 3 ...ERROR!
+Reading 0000 at 20 4 ...PASS!
+Reading 0000 at 20 5 ...PASS!
+Reading 0000 at 20 6 ...PASS!
+Reading 0000 at 20 7 ...PASS!
+Reading 1001 at 21 0 ...ERROR!
+Reading 1001 at 21 1 ...ERROR!
+Reading 1001 at 21 2 ...ERROR!
+Reading 1001 at 21 3 ...ERROR!
+Reading 0110 at 21 4 ...ERROR!
+Reading 0110 at 21 5 ...ERROR!
+Reading 0110 at 21 6 ...ERROR!
+Reading 0110 at 21 7 ...ERROR!
+Reading 0000 at 22 0 ...ERROR!
+Reading 0000 at 22 1 ...ERROR!
+Reading 0000 at 22 2 ...ERROR!
+Reading 0000 at 22 3 ...ERROR!
+Reading 0110 at 22 4 ...ERROR!
+Reading 0110 at 22 5 ...ERROR!
+Reading 0110 at 22 6 ...ERROR!
+Reading 0110 at 22 7 ...ERROR!
+Reading 0000 at 23 0 ...ERROR!
+Reading 0000 at 23 1 ...ERROR!
+Reading 0000 at 23 2 ...ERROR!
+Reading 0000 at 23 3 ...ERROR!
+Reading 1111 at 23 4 ...ERROR!
+Reading 1111 at 23 5 ...ERROR!
+Reading 1111 at 23 6 ...ERROR!
+Reading 1111 at 23 7 ...ERROR!
+Reading 1001 at 24 0 ...ERROR!
+Reading 1001 at 24 1 ...ERROR!
+Reading 1001 at 24 2 ...ERROR!
+Reading 1001 at 24 3 ...ERROR!
+Reading 0000 at 24 4 ...PASS!
+Reading 0000 at 24 5 ...PASS!
+Reading 0000 at 24 6 ...PASS!
+Reading 0000 at 24 7 ...PASS!
+Reading 1001 at 25 0 ...ERROR!
+Reading 1001 at 25 1 ...ERROR!
+Reading 1001 at 25 2 ...ERROR!
+Reading 1001 at 25 3 ...ERROR!
+Reading 0110 at 25 4 ...ERROR!
+Reading 0110 at 25 5 ...ERROR!
+Reading 0110 at 25 6 ...ERROR!
+Reading 0110 at 25 7 ...ERROR!
+Reading 0000 at 26 0 ...ERROR!
+Reading 0000 at 26 1 ...ERROR!
+Reading 0000 at 26 2 ...ERROR!
+Reading 0000 at 26 3 ...ERROR!
+Reading 0110 at 26 4 ...ERROR!
+Reading 0110 at 26 5 ...ERROR!
+Reading 0110 at 26 6 ...ERROR!
+Reading 0110 at 26 7 ...ERROR!
+Reading 0000 at 27 0 ...ERROR!
+Reading 0000 at 27 1 ...ERROR!
+Reading 0000 at 27 2 ...ERROR!
+Reading 0000 at 27 3 ...ERROR!
+Reading 1111 at 27 4 ...ERROR!
+Reading 1111 at 27 5 ...ERROR!
+Reading 1111 at 27 6 ...ERROR!
+Reading 1111 at 27 7 ...ERROR!
+Reading 1001 at 28 0 ...ERROR!
+Reading 1001 at 28 1 ...ERROR!
+Reading 1001 at 28 2 ...ERROR!
+Reading 1001 at 28 3 ...ERROR!
+Reading 0000 at 28 4 ...PASS!
+Reading 0000 at 28 5 ...PASS!
+Reading 0000 at 28 6 ...PASS!
+Reading 0000 at 28 7 ...PASS!
+Reading 1001 at 29 0 ...ERROR!
+Reading 1001 at 29 1 ...ERROR!
+Reading 1001 at 29 2 ...ERROR!
+Reading 1001 at 29 3 ...ERROR!
+Reading 0110 at 29 4 ...ERROR!
+Reading 0110 at 29 5 ...ERROR!
+Reading 0110 at 29 6 ...ERROR!
+Reading 0110 at 29 7 ...ERROR!
+Reading 0000 at 30 0 ...ERROR!
+Reading 0000 at 30 1 ...ERROR!
+Reading 0000 at 30 2 ...ERROR!
+Reading 0000 at 30 3 ...ERROR!
+Reading 0110 at 30 4 ...ERROR!
+Reading 0110 at 30 5 ...ERROR!
+Reading 0110 at 30 6 ...ERROR!
+Reading 0110 at 30 7 ...ERROR!
+Reading 0000 at 31 0 ...ERROR!
+Reading 0000 at 31 1 ...ERROR!
+Reading 0000 at 31 2 ...ERROR!
+Reading 0000 at 31 3 ...ERROR!
+Reading 1111 at 31 4 ...ERROR!
+Reading 1111 at 31 5 ...ERROR!
+Reading 1111 at 31 6 ...ERROR!
+Reading 1111 at 31 7 ...ERROR!
+>>> READ FROM BACKUP <<<
+Reading 1111 at 0 0 ...PASS!
+Reading 1111 at 0 1 ...PASS!
+Reading 1111 at 0 2 ...PASS!
+Reading 1111 at 0 3 ...PASS!
+Reading 0000 at 0 4 ...PASS!
+Reading 0000 at 0 5 ...PASS!
+Reading 0000 at 0 6 ...PASS!
+Reading 0000 at 0 7 ...PASS!
+Reading 1111 at 1 0 ...PASS!
+Reading 1111 at 1 1 ...PASS!
+Reading 1111 at 1 2 ...PASS!
+Reading 1111 at 1 3 ...PASS!
+Reading 0000 at 1 4 ...PASS!
+Reading 0000 at 1 5 ...PASS!
+Reading 0000 at 1 6 ...PASS!
+Reading 0000 at 1 7 ...PASS!
+Reading 1111 at 2 0 ...PASS!
+Reading 1111 at 2 1 ...PASS!
+Reading 1111 at 2 2 ...PASS!
+Reading 1111 at 2 3 ...PASS!
+Reading 0000 at 2 4 ...PASS!
+Reading 0000 at 2 5 ...PASS!
+Reading 0000 at 2 6 ...PASS!
+Reading 0000 at 2 7 ...PASS!
+Reading 1111 at 3 0 ...PASS!
+Reading 1111 at 3 1 ...PASS!
+Reading 1111 at 3 2 ...PASS!
+Reading 1111 at 3 3 ...PASS!
+Reading 0000 at 3 4 ...PASS!
+Reading 0000 at 3 5 ...PASS!
+Reading 0000 at 3 6 ...PASS!
+Reading 0000 at 3 7 ...PASS!
+Reading 1111 at 4 0 ...PASS!
+Reading 1111 at 4 1 ...PASS!
+Reading 1111 at 4 2 ...PASS!
+Reading 1111 at 4 3 ...PASS!
+Reading 0000 at 4 4 ...PASS!
+Reading 0000 at 4 5 ...PASS!
+Reading 0000 at 4 6 ...PASS!
+Reading 0000 at 4 7 ...PASS!
+Reading 1111 at 5 0 ...PASS!
+Reading 1111 at 5 1 ...PASS!
+Reading 1111 at 5 2 ...PASS!
+Reading 1111 at 5 3 ...PASS!
+Reading 0000 at 5 4 ...PASS!
+Reading 0000 at 5 5 ...PASS!
+Reading 0000 at 5 6 ...PASS!
+Reading 0000 at 5 7 ...PASS!
+Reading 1111 at 6 0 ...PASS!
+Reading 1111 at 6 1 ...PASS!
+Reading 1111 at 6 2 ...PASS!
+Reading 1111 at 6 3 ...PASS!
+Reading 0000 at 6 4 ...PASS!
+Reading 0000 at 6 5 ...PASS!
+Reading 0000 at 6 6 ...PASS!
+Reading 0000 at 6 7 ...PASS!
+Reading 1111 at 7 0 ...PASS!
+Reading 1111 at 7 1 ...PASS!
+Reading 1111 at 7 2 ...PASS!
+Reading 1111 at 7 3 ...PASS!
+Reading 0000 at 7 4 ...PASS!
+Reading 0000 at 7 5 ...PASS!
+Reading 0000 at 7 6 ...PASS!
+Reading 0000 at 7 7 ...PASS!
+Reading 1111 at 8 0 ...PASS!
+Reading 1111 at 8 1 ...PASS!
+Reading 1111 at 8 2 ...PASS!
+Reading 1111 at 8 3 ...PASS!
+Reading 0000 at 8 4 ...PASS!
+Reading 0000 at 8 5 ...PASS!
+Reading 0000 at 8 6 ...PASS!
+Reading 0000 at 8 7 ...PASS!
+Reading 1111 at 9 0 ...PASS!
+Reading 1111 at 9 1 ...PASS!
+Reading 1111 at 9 2 ...PASS!
+Reading 1111 at 9 3 ...PASS!
+Reading 0000 at 9 4 ...PASS!
+Reading 0000 at 9 5 ...PASS!
+Reading 0000 at 9 6 ...PASS!
+Reading 0000 at 9 7 ...PASS!
+Reading 1111 at 10 0 ...PASS!
+Reading 1111 at 10 1 ...PASS!
+Reading 1111 at 10 2 ...PASS!
+Reading 1111 at 10 3 ...PASS!
+Reading 0000 at 10 4 ...PASS!
+Reading 0000 at 10 5 ...PASS!
+Reading 0000 at 10 6 ...PASS!
+Reading 0000 at 10 7 ...PASS!
+Reading 1111 at 11 0 ...PASS!
+Reading 1111 at 11 1 ...PASS!
+Reading 1111 at 11 2 ...PASS!
+Reading 1111 at 11 3 ...PASS!
+Reading 0000 at 11 4 ...PASS!
+Reading 0000 at 11 5 ...PASS!
+Reading 0000 at 11 6 ...PASS!
+Reading 0000 at 11 7 ...PASS!
+Reading 1111 at 12 0 ...PASS!
+Reading 1111 at 12 1 ...PASS!
+Reading 1111 at 12 2 ...PASS!
+Reading 1111 at 12 3 ...PASS!
+Reading 0000 at 12 4 ...PASS!
+Reading 0000 at 12 5 ...PASS!
+Reading 0000 at 12 6 ...PASS!
+Reading 0000 at 12 7 ...PASS!
+Reading 1111 at 13 0 ...PASS!
+Reading 1111 at 13 1 ...PASS!
+Reading 1111 at 13 2 ...PASS!
+Reading 1111 at 13 3 ...PASS!
+Reading 0000 at 13 4 ...PASS!
+Reading 0000 at 13 5 ...PASS!
+Reading 0000 at 13 6 ...PASS!
+Reading 0000 at 13 7 ...PASS!
+Reading 1111 at 14 0 ...PASS!
+Reading 1111 at 14 1 ...PASS!
+Reading 1111 at 14 2 ...PASS!
+Reading 1111 at 14 3 ...PASS!
+Reading 0000 at 14 4 ...PASS!
+Reading 0000 at 14 5 ...PASS!
+Reading 0000 at 14 6 ...PASS!
+Reading 0000 at 14 7 ...PASS!
+Reading 1111 at 15 0 ...PASS!
+Reading 1111 at 15 1 ...PASS!
+Reading 1111 at 15 2 ...PASS!
+Reading 1111 at 15 3 ...PASS!
+Reading 0000 at 15 4 ...PASS!
+Reading 0000 at 15 5 ...PASS!
+Reading 0000 at 15 6 ...PASS!
+Reading 0000 at 15 7 ...PASS!
+Reading 1111 at 16 0 ...PASS!
+Reading 1111 at 16 1 ...PASS!
+Reading 1111 at 16 2 ...PASS!
+Reading 1111 at 16 3 ...PASS!
+Reading 0000 at 16 4 ...PASS!
+Reading 0000 at 16 5 ...PASS!
+Reading 0000 at 16 6 ...PASS!
+Reading 0000 at 16 7 ...PASS!
+Reading 1111 at 17 0 ...PASS!
+Reading 1111 at 17 1 ...PASS!
+Reading 1111 at 17 2 ...PASS!
+Reading 1111 at 17 3 ...PASS!
+Reading 0000 at 17 4 ...PASS!
+Reading 0000 at 17 5 ...PASS!
+Reading 0000 at 17 6 ...PASS!
+Reading 0000 at 17 7 ...PASS!
+Reading 1111 at 18 0 ...PASS!
+Reading 1111 at 18 1 ...PASS!
+Reading 1111 at 18 2 ...PASS!
+Reading 1111 at 18 3 ...PASS!
+Reading 0000 at 18 4 ...PASS!
+Reading 0000 at 18 5 ...PASS!
+Reading 0000 at 18 6 ...PASS!
+Reading 0000 at 18 7 ...PASS!
+Reading 1111 at 19 0 ...PASS!
+Reading 1111 at 19 1 ...PASS!
+Reading 1111 at 19 2 ...PASS!
+Reading 1111 at 19 3 ...PASS!
+Reading 0000 at 19 4 ...PASS!
+Reading 0000 at 19 5 ...PASS!
+Reading 0000 at 19 6 ...PASS!
+Reading 0000 at 19 7 ...PASS!
+Reading 1111 at 20 0 ...PASS!
+Reading 1111 at 20 1 ...PASS!
+Reading 1111 at 20 2 ...PASS!
+Reading 1111 at 20 3 ...PASS!
+Reading 0000 at 20 4 ...PASS!
+Reading 0000 at 20 5 ...PASS!
+Reading 0000 at 20 6 ...PASS!
+Reading 0000 at 20 7 ...PASS!
+Reading 1111 at 21 0 ...PASS!
+Reading 1111 at 21 1 ...PASS!
+Reading 1111 at 21 2 ...PASS!
+Reading 1111 at 21 3 ...PASS!
+Reading 0000 at 21 4 ...PASS!
+Reading 0000 at 21 5 ...PASS!
+Reading 0000 at 21 6 ...PASS!
+Reading 0000 at 21 7 ...PASS!
+Reading 1111 at 22 0 ...PASS!
+Reading 1111 at 22 1 ...PASS!
+Reading 1111 at 22 2 ...PASS!
+Reading 1111 at 22 3 ...PASS!
+Reading 0000 at 22 4 ...PASS!
+Reading 0000 at 22 5 ...PASS!
+Reading 0000 at 22 6 ...PASS!
+Reading 0000 at 22 7 ...PASS!
+Reading 1111 at 23 0 ...PASS!
+Reading 1111 at 23 1 ...PASS!
+Reading 1111 at 23 2 ...PASS!
+Reading 1111 at 23 3 ...PASS!
+Reading 0000 at 23 4 ...PASS!
+Reading 0000 at 23 5 ...PASS!
+Reading 0000 at 23 6 ...PASS!
+Reading 0000 at 23 7 ...PASS!
+Reading 1111 at 24 0 ...PASS!
+Reading 1111 at 24 1 ...PASS!
+Reading 1111 at 24 2 ...PASS!
+Reading 1111 at 24 3 ...PASS!
+Reading 0000 at 24 4 ...PASS!
+Reading 0000 at 24 5 ...PASS!
+Reading 0000 at 24 6 ...PASS!
+Reading 0000 at 24 7 ...PASS!
+Reading 1111 at 25 0 ...PASS!
+Reading 1111 at 25 1 ...PASS!
+Reading 1111 at 25 2 ...PASS!
+Reading 1111 at 25 3 ...PASS!
+Reading 0000 at 25 4 ...PASS!
+Reading 0000 at 25 5 ...PASS!
+Reading 0000 at 25 6 ...PASS!
+Reading 0000 at 25 7 ...PASS!
+Reading 1111 at 26 0 ...PASS!
+Reading 1111 at 26 1 ...PASS!
+Reading 1111 at 26 2 ...PASS!
+Reading 1111 at 26 3 ...PASS!
+Reading 0000 at 26 4 ...PASS!
+Reading 0000 at 26 5 ...PASS!
+Reading 0000 at 26 6 ...PASS!
+Reading 0000 at 26 7 ...PASS!
+Reading 1111 at 27 0 ...PASS!
+Reading 1111 at 27 1 ...PASS!
+Reading 1111 at 27 2 ...PASS!
+Reading 1111 at 27 3 ...PASS!
+Reading 0000 at 27 4 ...PASS!
+Reading 0000 at 27 5 ...PASS!
+Reading 0000 at 27 6 ...PASS!
+Reading 0000 at 27 7 ...PASS!
+Reading 1111 at 28 0 ...PASS!
+Reading 1111 at 28 1 ...PASS!
+Reading 1111 at 28 2 ...PASS!
+Reading 1111 at 28 3 ...PASS!
+Reading 0000 at 28 4 ...PASS!
+Reading 0000 at 28 5 ...PASS!
+Reading 0000 at 28 6 ...PASS!
+Reading 0000 at 28 7 ...PASS!
+Reading 1111 at 29 0 ...PASS!
+Reading 1111 at 29 1 ...PASS!
+Reading 1111 at 29 2 ...PASS!
+Reading 1111 at 29 3 ...PASS!
+Reading 0000 at 29 4 ...PASS!
+Reading 0000 at 29 5 ...PASS!
+Reading 0000 at 29 6 ...PASS!
+Reading 0000 at 29 7 ...PASS!
+Reading 1111 at 30 0 ...PASS!
+Reading 1111 at 30 1 ...PASS!
+Reading 1111 at 30 2 ...PASS!
+Reading 1111 at 30 3 ...PASS!
+Reading 0000 at 30 4 ...PASS!
+Reading 0000 at 30 5 ...PASS!
+Reading 0000 at 30 6 ...PASS!
+Reading 0000 at 30 7 ...PASS!
+Reading 1111 at 31 0 ...PASS!
+Reading 1111 at 31 1 ...PASS!
+Reading 1111 at 31 2 ...PASS!
+Reading 1111 at 31 3 ...PASS!
+Reading 0000 at 31 4 ...PASS!
+Reading 0000 at 31 5 ...PASS!
+Reading 0000 at 31 6 ...PASS!
+Reading 0000 at 31 7 ...PASS!

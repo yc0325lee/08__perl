@@ -1,0 +1,98 @@
+# vim: ft=text ts=4 sw=4 tw=999 expandtab
+# ----------------------------------------------------------------------------
+# File : sample.in
+# Description : 
+# Author : yc0325lee
+# Created : 2018-12-16 13:39:31 by yc0325lee
+# Modified : 2018-12-21 00:28:22 by yc0325lee
+# ----------------------------------------------------------------------------
+
+RuleName TxFlop  RxFlop  ClockDomains Location   Info
+-------- ------- ------- ------------ ---------- ----
+CNTL:    TxFlop0 RxFlop3 CLK1::CLK2   Location-0 -
+CNTL:    TxFlop1 RxFlop2 CLK1::CLK2   Location-1 -
+CNTL:    TxFlop2 RxFlop1 CLK1::CLK2   Location-2 -
+CNTL:    TxFlop3 RxFlop0 CLK1::CLK2   Location-2 -
+
+
+RuleName TxFlop  RxFlop  ClockDomains Location   Info
+-------- ------- ------- ------------ ---------- ----
+W_CNTL:  TxFlop0 RxFlop4 CLK1::CLK2   Location-0 -
+W_CNTL:  TxFlop1 RxFlop3 CLK1::CLK2   Location-1 -
+W_CNTL:  TxFlop2 RxFlop2 CLK1::CLK2   Location-2 -
+W_CNTL:  TxFlop3 RxFlop1 CLK1::CLK2   Location-2 -
+
+
+RuleName TxFlop  RxFlop  ClockDomains Location   Info
+-------- ------- ------- ------------ ---------- ----
+W_DATA:  TxFlop0 RxFlop4 CLK1::CLK2   Location-0 -
+W_DATA:  TxFlop1 RxFlop3 CLK1::CLK2   Location-1 -
+W_DATA:  TxFlop2 RxFlop2 CLK1::CLK2   Location-2 -
+W_DATA:  TxFlop3 RxFlop1 CLK1::CLK2   Location-2 -
+
+
+RuleName   Signal   ClockDomains Location   Info
+---------- ------   ------------ ---------- ----
+INTERFACE: RxData   CLK1::CLK2   Location-0 -
+INTERFACE: TxData   CLK1::CLK2   Location-1 -
+INTERFACE: RxCntl   CLK1::CLK2   Location-2 -
+INTERFACE: TxCntl   CLK1::CLK2   Location-3 -
+INTERFACE: Feedback CLK1::CLK2   Location-4 -
+
+INTERFACE: RxData   CLK1::CLK2   Location-0 -
+INTERFACE: TxData   CLK1::CLK2   Location-1 -
+INTERFACE: RxCntl   CLK1::CLK2   Location-2 -
+INTERFACE: TxCntl   CLK1::CLK2   Location-3 -
+INTERFACE: Feedback CLK1::CLK2   Location-4 -
+
+
+RuleName     Signal   ClockDomains Location   Info
+------------ ------   ------------ ---------- ----
+U_INTERFACE: RxData   CLK1::CLK2   Location-0 -
+U_INTERFACE: TxData   CLK1::CLK2   Location-1 -
+U_INTERFACE: RxCntl   CLK1::CLK2   Location-2 -
+U_INTERFACE: TxCntl   CLK1::CLK2   Location-3 -
+U_INTERFACE: Feedback CLK1::CLK2   Location-4 -
+
+U_INTERFACE: RxData   CLK1::CLK2   Location-0 -
+U_INTERFACE: TxData   CLK1::CLK2   Location-1 -
+U_INTERFACE: RxCntl   CLK1::CLK2   Location-2 -
+U_INTERFACE: TxCntl   CLK1::CLK2   Location-3 -
+U_INTERFACE: Feedback CLK1::CLK2   Location-4 -
+
+
+RuleName     Signal   ClockDomains Location   Info
+------------ ------   ------------ ---------- ----
+W_INTERFACE: RxData   CLK1::CLK2   Location-0 -
+W_INTERFACE: RxData   CLK1::CLK2   Location-1 -
+W_INTERFACE: TxData   CLK1::CLK2   Location-2 -
+W_INTERFACE: RxCntl   CLK1::CLK2   Location-3 -
+W_INTERFACE: TxCntl   CLK1::CLK2   Location-4 -
+W_INTERFACE: Feedback CLK1::CLK2   Location-5 -
+
+W_INTERFACE: RxData   CLK1::CLK2   Location-0 -
+W_INTERFACE: TxData   CLK1::CLK2   Location-1 -
+W_INTERFACE: RxCntl   CLK1::CLK2   Location-2 -
+W_INTERFACE: TxCntl   CLK1::CLK2   Location-3 -
+W_INTERFACE: Feedback CLK1::CLK2   Location-4 -
+
+
+RuleName  DriverFlop  VictimFlop    ClockDomains Location   Info
+--------- ----------- ------------- ------------ ---------- ----
+W_GLITCH: CntlDriver0 glitchVictim1 CLK1::CLK2   Location-0 -
+W_GLITCH: CntlDriver1 glitchVictim1 CLK1::CLK2   Location-1 -
+W_GLITCH: CntlDriver2 glitchVictim1 CLK1::CLK2   Location-2 -
+
+W_GLITCH: CntlDriver0 glitchVictim0 CLK1::CLK2   Location-0 -
+W_GLITCH: CntlDriver1 glitchVictim0 CLK1::CLK2   Location-1 -
+
+
+RuleName        DriverFlop  ReconPoint  ReconDepth ClockDomains Location   Info
+--------------- ----------- ----------- ---------- ----------   ---------- ----
+W_RECON_GROUPS: CntlDriver0 reconPoint1 3          CLK1::CLK2   Location-0 -
+W_RECON_GROUPS: CntlDriver1 reconPoint1 3          CLK1::CLK2   Location-1 -
+W_RECON_GROUPS: CntlDriver2 reconPoint1 3          CLK1::CLK2   Location-2 -
+
+W_RECON_GROUPS: CntlDriver0 reconPoint0 2          CLK1::CLK2   Location-0 -
+W_RECON_GROUPS: CntlDriver1 reconPoint0 2          CLK1::CLK2   Location-1 -
+
